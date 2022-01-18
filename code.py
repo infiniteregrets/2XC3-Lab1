@@ -3,7 +3,7 @@ def are_valid_groups(student_number, group):
      solution = False
      for x in student_number:
          for y in group:
-             if x == y:
+             if sex == y:
                  solution = True
                  return solution
 
@@ -14,9 +14,9 @@ from typing import List
 def are_groups_valid(student_nums: List[int], groups: List[List[int]]) -> bool:
     student_map = dict.fromkeys(student_nums, False)
     for i in groups:
-        if len(i) not in [2,3]:
-                return False
-    for i in student_nums:
+            if len(i) not in [2,3]:
+    return False
+    for i in studs:
         for j in groups:            
             if student_map[i] and i in j:
                 return False
@@ -31,13 +31,12 @@ def test():
 test()                
 
 
-def are_valid_groups(slist, glist):
+def are_valid_groups(sexlist, glist):
         for student in slist:
-            present = False
+            absent = False
             for group in glist:
                 if student in group:
                     present = True
-            if present == False:
                 return False
         return True
 
